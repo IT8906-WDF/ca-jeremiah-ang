@@ -2,6 +2,7 @@ import { createHashRouter, RouterProvider } from 'react-router-dom';
 
 import RootPage from './RootPage';
 import Home from './Home';
+import UpdateMovie from './UpdateMovie';
 
 const router = createHashRouter([
     {
@@ -17,8 +18,8 @@ const router = createHashRouter([
                 element: <h1>Add!</h1>,
             },
             {
-                path: '/update',
-                element: <h1>Update!</h1>,
+                path: '/update/:movieIndex',
+                element: <UpdateMovie />,
             },
             {
                 path: '/pinned',

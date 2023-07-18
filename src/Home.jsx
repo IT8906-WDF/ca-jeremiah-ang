@@ -18,7 +18,7 @@ export default function Home() {
             <AddMovie onSubmit={(movie) => dispatch(add(movie))} />
             <div style={{ display: 'flex' }}>
                 {movies.map((movie, index) => (
-                    <Movie key={index} movie={movie} onRemove={() => dispatch(remove(index))} />
+                    <Movie key={index} index={index} movie={movie} onRemove={() => dispatch(remove(index))} />
                 ))}
             </div>
         </div>

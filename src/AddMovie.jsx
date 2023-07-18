@@ -4,6 +4,13 @@ export default function AddMovie(props) {
     const titleRef = React.useRef();
     const genreRef = React.useRef();
 
+    React.useEffect(() => {
+        if (props.movie) {
+            titleRef.current.value = props.movie.title;
+            genreRef.current.value = props.movie.genre;
+        }
+    }, []);
+
     return (
         <div>
             <form
